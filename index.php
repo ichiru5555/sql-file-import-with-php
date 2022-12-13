@@ -1,9 +1,9 @@
 <?php
 /*
-define("DB_HOST", "localhost");
-define("DB_USER", "");
-define("DB_PASS", "");
-define("DB_NAME", "");
+手続き型で書いたほうです。
+オブジェクト指向型で書いたほうはobject.phpにあります。
+わざわざオブジェクト指向型で書く必要はなかったけどなんとなく書いてみた。
+もしmysqliで書くことになればオブジェクト指向型で書いたほうがいいです。
 */
 $db_host = "";
 $user = "";
@@ -23,8 +23,5 @@ $db_in = mysqli_multi_query($link, $query);
 <?php }else{ ?>
 <p>インポートに失敗しました。</p>
 <?php } ?>
-<?php
-mysqli_close($link);
-exit;
-?>
+<?php mysqli_close($link); ?>
 </html>
